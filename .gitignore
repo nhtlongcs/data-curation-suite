@@ -2,3 +2,6 @@
 *.lock
 .venv/
 *.jpg
+deakin_txt_lists
+tarsier_outputs
+preview

@@ -37,7 +37,10 @@ if __name__ == "__main__":
 
     # save to ID*_yyyy_mm_dd.txt -> all paths
     # ID101_20220310_172608_000.jpg -> ID101_20220310.txt
-    
+    # sort path by name
+    all_image_paths.sort()
+    out_dir = 'deakin_txt_lists'
+    os.makedirs(out_dir, exist_ok=True)
     for image_path in all_image_paths:
         image_name = image_path.stem  # ID101_20220310_172608_000
         parts = image_name.split("_")
@@ -49,6 +52,6 @@ if __name__ == "__main__":
         month = date_part[4:6]
         day = date_part[6:8]
         out_filename = f"{id_part}_{year}{month}{day}.txt"
-        out_filepath = base_dir / out_filename
+        out_filepath = os.path.join(out_dir, out_filename)
         with open(out_filepath, "a") as f:
             f.write(str(image_path) + "\n")
