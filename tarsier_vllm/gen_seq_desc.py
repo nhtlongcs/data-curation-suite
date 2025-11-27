@@ -13,8 +13,8 @@ def make_engine_args(model_name: str, max_num_seqs: int = 4):
         model=model_name,
         # dtype="half", # dangerous: may cause instability 
         # kv_cache_dtype="fp8", # dangerous: may cause instability 
-        enable_chunked_prefill=True,
-        enable_prefix_caching=True, 
+        # enable_chunked_prefill=True,
+        # enable_prefix_caching=True, 
 
         disable_log_stats=True,  # Monitor performance
         # enforce_eager=True,
