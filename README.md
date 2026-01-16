@@ -48,6 +48,21 @@ Automatically generate question–answer pairs from videos for training video-QA
 - reasoning-based questions
 
 
+### Use Case 5: Text Classification Synthetic Dataset Generation
+
+Generate high-quality labeled text datasets using vLLM reasoning models with YAML-based configuration. 
+
+**[text-clf-synth](text-clf-synth/)** enables you to:
+- Define dataset schemas using simple YAML configs (fields, types, ranges, labels)
+- Generate realistic data with reasoning models for better coherence
+- Automatically split into train/test sets with optional stratification
+- Output ready-to-use CSV files
+
+**Example**: Generate IELTS Task 2 essays with topics, essay types, full essays, band scores, and scoring rationale.
+
+Check out the [detailed instructions](text-clf-synth/README.md) for setup and usage.
+
+
 ### Notes
 - This repository focuses on reproducible, scalable generation for curators/annotators; it is not a training codebase.
 - Ensure you have rights to process the media you run through the pipeline.
